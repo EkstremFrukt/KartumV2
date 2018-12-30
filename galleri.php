@@ -22,8 +22,5 @@
     </div>
   </div>
 
-  <script type="text/javascript">
-    alert("hello");
-  </script>
 </body>
 </html>
