@@ -6,6 +6,7 @@
 --purp-one: rgb(94,43,150);  /*#5D2B96*/
 --purp-two: rgb(97,53,112);  /*#613570*/
 --yellow-one: rgb(201,196,86);  /*#C9C456*/
+--yellow-two: rgb(150,145,46);  /*#96912E*/
 }
 /*--- Variables END--*/
 
@@ -88,7 +89,8 @@ body {
   transform: translate(0, -3em); /* Standard syntax */
   font-size: 3em;
   font-family: 'Titillium Web', sans-serif;
-  text-shadow: 10px 10px 10px black;
+  text-shadow: 5px 5px 10px black;
+  z-index: 4;
 }
 .header-overlay-2{
 
@@ -101,7 +103,7 @@ body {
   grid-row:7;
   z-index: 3;
   background: var(--purp-two);
-  color: #96912E;
+  color: white;
   padding: 1.5em;
   min-width: 150px;
   max-width: 200px;
@@ -123,7 +125,6 @@ body {
 
 .inner-btn {
   font-size: 2em;
-  text-opacity: 1;
   text-align: center;
 }
 
@@ -142,3 +143,36 @@ body {
   background-color: var(--purp-two);
   border-top: 0.2em solid var(--purp-two);
 }
+
+/*--- GALLERI START ---*/
+
+.galleri-wrapper {
+  max-width: 1700px;
+  margin:auto;
+}
+
+.galleri-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 1em;
+  align-items: center;
+}
+
+.bilder {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  transition: 0.2s;
+}
+
+.bilder:hover {
+  transform: scale3d(1.2, 1.2, 1.2);
+  transition: 1s;
+}
+/*--- LIGHTBOX START ---*/
+
+
+
+/*--- LIGHTBOX END ---*/
+
+/*--- GALLERI END ---*/
