@@ -10,27 +10,21 @@
 <body>
   <!-- Images used to open the lightbox -->
   <div class="row">
-    <div class="column">
-      <img src="assets/bilder/geiter/test1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-    </div>
-    <div class="column">
-      <img src="assets/bilder/geiter/test2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-    </div>
-    <div class="column">
-      <img src="assets/bilder/geiter/test3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-    </div>
-    <div class="column">
+
+
       <?php
         $dirname = "assets/bilder/geiter/";
         $images = glob($dirname."*.jpg");
         $counter = 1;
           foreach($images as $image) {
-
+              $lengde = count($images);
+              echo '<div class="column">';
               echo '<img src="'.$image.'" onclick="openModal();currentSlide('.$counter.')">';
+              echo '</div>';
               $counter++;
-          }
+            }
       ?>
-    </div>
+
   </div>
 
 
@@ -39,20 +33,19 @@
     <span class="close cursor" onclick="closeModal()">&times;</span>
     <div class="modal-content">
 
-      <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
-        <img src="assets/bilder/geiter/test1.jpg">
-      </div>
+        <?php
+        $counter2 = 1;
+        foreach($images as $image) {
+          echo '<div class="mySlides">';
+          echo '<div class="numbertext"> '.$counter2.' / '.$lengde.'</div>';
+          echo '<img src="'.$image.'">';
+          echo '</div>';
+          $counter2++;
+        }
 
-      <div class="mySlides">
-        <div class="numbertext">2 / 3</div>
-        <img src="assets/bilder/geiter/test2.jpg">
-      </div>
+        ?>
 
-      <div class="mySlides">
-        <div class="numbertext">3 / 3</div>
-        <img src="assets/bilder/geiter/test3.jpg">
-      </div>
+
 
 
       <!-- Next/previous controls -->
@@ -65,17 +58,17 @@
       </div>
 
       <!-- Thumbnail image controls -->
-      <div class="column">
-        <img class="demo" src="assets/bilder/geiter/test1.jpg" onclick="currentSlide(1)" alt="Nature">
-      </div>
+      <?php
+      $counter3 = 1;
 
-      <div class="column">
-        <img class="demo" src="assets/bilder/geiter/test2.jpg" onclick="currentSlide(2)" alt="Snow">
-      </div>
+      foreach($images as $image) {
+          echo '<div class="column">';
+          echo '<img class="demo" src="'.$image.'" onclick="currentSlide('.$counter3.')" alt="Mountains'.$counter3.'">';
+          $counter3++;
+          echo '</div>';
+      }
+      ?>
 
-      <div class="column">
-        <img class="demo" src="assets/bilder/geiter/test3.jpg" onclick="currentSlide(3)" alt="Mountains">
-      </div>
     </div>
   </div>
 

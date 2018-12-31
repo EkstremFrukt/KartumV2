@@ -16,7 +16,7 @@ img:hover{
 /* Create four equal columns that floats next to eachother */
 .column {
   float: left;
-  width: 25%;
+  width: 20%;
 }
 
 /* The Modal (background) */
@@ -70,9 +70,12 @@ img:hover{
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top:40%;
   width: auto;
-  padding: 26px;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  padding-left: 26px;
+  padding-right: 26px;
   margin-top: -60px;
   color: white;
   font-weight: bold;
@@ -81,7 +84,7 @@ img:hover{
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
-  align-items: center<
+  align-items: center;
 }
 
 /* Position the "next button" to the right */
@@ -103,7 +106,7 @@ img:hover{
   padding: 8px 12px;
   position: absolute;
   top: 0;
-}
+
 
 /* Caption text */
 .caption-container {
