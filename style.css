@@ -82,7 +82,7 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
-  background-image: linear-gradient(rgba(94,43,150, 0.3), rgba(94,43,150, 0.3),rgba(94,43,150, 0.3),rgba(94,43,150, 0.3),rgba(94,43,150, 0.3),rgba(94,43,150, 0.3),rgba(94,43,150, 0.3),rgba(94,43,150, 0.8));
+  background: rgba(94,43,150, 0.3);
 }
 .velcome{
   -webkit-transform: translate(); /* Safari */
@@ -98,40 +98,45 @@ body {
 /* --- Video header-overlay END---*/
 
 /*--- BTNs START ---*/
-.test1{
-  grid-column: 3/7;
-  grid-row:7;
+.btn{
   z-index: 3;
-  background: var(--purp-two);
+  background: linear-gradient(#5D2B96, #0500cc);
   color: white;
-  padding: 1.5em;
-  min-width: 150px;
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 20px darkgrey;
+  padding: 0.5em 3.5em 0.5em 3.5em;
+  border: 1px solid #BE5AFC;
   text-align: center;
-  transition: 1s;
+  transition: 0.5s;
   text-decoration: none;
   font-family: 'Titillium Web', sans-serif;
   text-transform: uppercase;
+  box-shadow: 0 4px 2px black;
 }
 
-.test1:hover {
+.btn:hover {
   transform: scale3d(1.2, 1.2, 1.2);
-  box-shadow: 0 0 30px blue;
+  box-shadow: 40px 40px 8px 0 rgba(0, 0, 0, 0.2);
+  filter: brightness(130%);
+  z-index: 5;
 }
 
 .inner-btn {
   font-size: 2em;
   text-align: center;
 }
+.btn-galleri {
+  grid-column: 3/7;
+  grid-row:7;
+  z-index: 4;
+  margin-left: auto;
+  margin-right: 5%;
+}
 
-.test2 {
+.btn-kontakt {
   grid-column: 7/11;
   grid-row:7;
   z-index: 4;
+  margin-right: auto;
+  margin-left: 5%;
 }
 /*--- BTNs END ---*/
 

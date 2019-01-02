@@ -4,50 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="galleristyle.css">
+  <link rel="stylesheet" href="galleristyle2.css">
   <title>Document</title>
 </head>
 <body>
-  <div class="galleri-wrapper">
   <!-- Images used to open the lightbox -->
-  <div class="row">
-
-
-    <div class="column">
-      <?php
-        $dirname = "assets/bilder/geiter/";
-        $images = glob($dirname."*.jpg");
-        $counter = 1;
-          foreach($images as $image) {
-              $lengde = count($images);
-
-              if ($counter%4 == 1) {
-              echo '<img src="'.$image.'" onclick="openModal();currentSlide('.$counter.')">';
-
-              }
-              $counter++;
-            }
-      ?>
-      </div>
-
+  <div class="wrapper">
+    <div class="row">
       <div class="column">
         <?php
-        $counter = 1;
+          $dirname = "assets/bilder/geiter/";
+          $images = glob($dirname."*.jpg");
+          $counter = 1;
             foreach($images as $image) {
+                $lengde = count($images);
 
-                if ($counter%4 == 2) {
+                if ($counter%4 == 1) {
                 echo '<img src="'.$image.'" onclick="openModal();currentSlide('.$counter.')">';
+
                 }
                 $counter++;
               }
         ?>
         </div>
+
         <div class="column">
           <?php
           $counter = 1;
               foreach($images as $image) {
 
-                  if ($counter%4 == 3) {
+                  if ($counter%4 == 2) {
                   echo '<img src="'.$image.'" onclick="openModal();currentSlide('.$counter.')">';
                   }
                   $counter++;
@@ -59,21 +45,33 @@
             $counter = 1;
                 foreach($images as $image) {
 
-                    if ($counter%4 == 0) {
+                    if ($counter%4 == 3) {
                     echo '<img src="'.$image.'" onclick="openModal();currentSlide('.$counter.')">';
                     }
                     $counter++;
                   }
             ?>
             </div>
-          </div>
+            <div class="column">
+              <?php
+              $counter = 1;
+                  foreach($images as $image) {
 
+                      if ($counter%4 == 0) {
+                      echo '<img src="'.$image.'" onclick="openModal();currentSlide('.$counter.')">';
+                      }
+                      $counter++;
+                    }
+              ?>
+              </div>
+            </div>
+          </div>
 
   <!-- The Modal/Lightbox -->
   <div id="myModal" class="modal">
     <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
 
+    <div class="modal-content">
         <?php
         $counter2 = 1;
         foreach($images as $image) {
@@ -98,8 +96,10 @@
         <p id="caption"></p>
       </div>
 
+
       <!-- Thumbnail image controls -->
       <?php
+      /*
       $counter3 = 1;
 
       foreach($images as $image) {
@@ -108,11 +108,11 @@
           $counter3++;
           echo '</div>';
       }
+      */
       ?>
 
     </div>
   </div>
-</div>
   <script>
     // Open the Modal
     function openModal() {
