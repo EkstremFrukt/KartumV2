@@ -1,7 +1,49 @@
+/*--- Variables START--*/
+:root{
+--green-one: rgb(49,201,94);  /*#31C95E*/
+--green-two: rgb(18,150,57);  /*#129639*/
+--green-three: rgb(48,99,22);  /*#306316*/
+--purp-one: rgb(94,43,150);  /*#5D2B96*/
+--purp-two: rgb(97,53,112);  /*#613570*/
+--yellow-one: rgb(201,196,86);  /*#C9C456*/
+--yellow-two: rgb(150,145,46);  /*#96912E*/
+}
+/*--- Variables END--*/
 * {
     box-sizing: border-box;
 }
-
+body{
+  margin: 0;
+  padding: 0;
+}
+/*-----------TABS START-------*/
+.gallerPickerContainer{
+  top:0;
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  text-align: center;
+  background-color: rgba(97,53,112, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 22;
+}
+.galleryPicker {
+    background-color: var(--purp-two);
+    font-family: 'Titillium Web', sans-serif;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.galleryPicker:hover{
+  filter: brightness(130%);
+}
+/*-----------TABS END-------*/
 .row {
     display: -ms-flexbox; /* IE10 */
     display: flex;
@@ -22,8 +64,6 @@
     vertical-align: middle;
     width: 100%;
     cursor: pointer;
-
-    box-shadow: 0 0 3px black;
 }
 
 .column img:hover {
@@ -35,7 +75,7 @@
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 51; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -43,14 +83,16 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  align-items: center;
 }
 
 /* Modal Content (image) */
 .modal-content img {
   margin: auto;
   display: block;
-  width: 80%;
+  width: auto;
   max-width: 1500px;
+  max-height: 100vh;
 }
 /* The Close Button */
 .close {
@@ -73,11 +115,13 @@
 .mySlides {
   display: none;
 }
+
+
 /* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top:40%;
   width: auto;
   padding-top: 5em;
