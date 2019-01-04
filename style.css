@@ -99,9 +99,7 @@ body {
   max-width: 3em;
   margin: auto;
 }
-.header-overlay-2{
 
-}
 /* --- Video header-overlay END---*/
 
 /*--- BTNs START ---*/
@@ -151,11 +149,37 @@ body {
   border: 1px solid red;
   grid-column: 1/13;
   grid-row: 10/13;
+  height: 50vh;
+  background-image: url("assets/bilder/geiter/test2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+	background-attachment: fixed;
   z-index: 1;
-  background-color: var(--purp-two);
   border-top: 0.2em solid var(--purp-two);
-}
+  box-shadow: 0 -3px 20px black;
+  font-family: 'Titillium Web', sans-serif;
+  justify-content: center;
+  margin: auto;
 
+}
+.textAreaBackground {
+  border: 1px solid red;
+  grid-column: 1/13;
+  grid-row: 10/13;
+  height: 50vh;
+  background-color: rgba(94,43,150, 0.8);
+  font-size: 1.5em;
+  z-index: 1;
+  border-top: 0.2em solid var(--purp-two);
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+.textAreaBox{
+  align-self: center;
+  margin: auto;
+}
 /*--- GALLERI START ---*/
 
 /*--- LIGHTBOX START ---*/

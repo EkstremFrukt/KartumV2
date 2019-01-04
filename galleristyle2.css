@@ -84,6 +84,7 @@ body{
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   align-items: center;
+  justify-content: center;
 }
 
 /* Modal Content (image) */
@@ -93,6 +94,7 @@ body{
   width: auto;
   max-width: 1500px;
   max-height: 100vh;
+  align-self: center;
 }
 /* The Close Button */
 .close {
