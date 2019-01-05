@@ -266,7 +266,7 @@
       captionText.innerHTML = dots[slideIndex-1].alt;
     }
 
-    // Open the Modal
+    // Open the Modal2
     function openModal2() {
       document.getElementById('myModal2').style.display = "block";
     }
@@ -307,7 +307,8 @@
       captionText.innerHTML = dots[slideIndex-1].alt;
     }
     //modal end
-    //galleri
+
+    //galleri picker
     function openGallery(galleryName) {
         var i;
         var x = document.getElementsByClassName("gallery");
