@@ -10,7 +10,9 @@
 </head>
 <body>
   <div class="gallerPickerContainer">
-    <button class="galleryPicker" onclick="openGallery('Geit')">Geiter</button>
+    <div id="addTest">
+      <button class="galleryPicker" onclick="openPage('Geit', this, 'red')">Norsk Kystgeit</button>
+    </div>
     <button class="galleryPicker" onclick="openGallery('Hest')">Hester</button>
     <button class="galleryPicker" onclick="openGallery('Diverse')">Diverse</button>
   </div>
@@ -316,6 +318,22 @@
            x[i].style.display = "none";
         }
         document.getElementById(galleryName).style.display = "block";
+    }
+
+    function openPage(pageName,elmnt,color) {
+      document.getElementById("addTest").removeAttribute("class");
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("gallery");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("galleryPicker");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+      document.getElementById("addTest").classList.add("feil");
     }
   </script>
 </body>

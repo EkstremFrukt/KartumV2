@@ -16,6 +16,9 @@ body{
   margin: 0;
   padding: 0;
 }
+#Geit {
+  background-color: blue;
+}
 /*-----------TABS START-------*/
 .gallerPickerContainer{
   top:0;
@@ -27,7 +30,14 @@ body{
   margin-right: auto;
   z-index: 22;
 }
+.feil{
+  background-color: blue;
+  color: red;
+  font-size: 40px;
+  display: inline-block;
+}
 .galleryPicker {
+    display: inline-block;
     background-color: var(--purp-two);
     font-family: 'Titillium Web', sans-serif;
     border: none;
@@ -36,9 +46,10 @@ body{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.3em;
     margin: 4px 2px;
     cursor: pointer;
+    text-shadow: 1px 1px 2px black;
 }
 .galleryPicker:hover{
   filter: brightness(130%);
@@ -162,7 +173,7 @@ body{
         max-width: 50%;
     }
     .wrapper {
-      padding: 2em 0 0 0;
+      padding: 0 0 0 0;
       margin: none;
     }
 }
@@ -175,7 +186,7 @@ body{
     }
 
     .wrapper {
-      padding: 2em 0 0 0;
+      padding: 0 0 0 0;
       margin-left: -17px;
       margin-right: -17px;
     }
