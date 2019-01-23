@@ -16,6 +16,12 @@
     <button class="galleryPicker" onclick="openGallery('Hest')">Hester</button>
     <button class="galleryPicker" onclick="openGallery('Diverse')">Diverse</button>
   </div>
+
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="assets/logo/logo3.png" alt="" class="logo">
+    </a>
+  </div>
   <!-- Images used to open the lightbox -->
   <div class="wrapper">
     <!-- GEIT GALLERY START -->

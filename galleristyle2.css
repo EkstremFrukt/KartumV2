@@ -19,6 +19,18 @@ body{
 #Geit {
   background-color: blue;
 }
+/*----- LOGO START ----*/
+.logo-container{
+  position: fixed;
+  top: 3em;
+  left: 3em;
+  z-index: 44;
+  float: left;
+}
+.logo{
+  max-width: 9em;
+}
+/*----- LOGO STOP ----*/
 /*-----------TABS START-------*/
 .gallerPickerContainer{
   top:0;
